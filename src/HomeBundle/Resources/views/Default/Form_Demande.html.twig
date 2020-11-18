@@ -1,0 +1,213 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!--====================  breadcrumb area ====================-->
+    <div class="page-breadcrumb bg-img space__bottom--r120" data-bg="{{ asset('bundles/home/assets/img/backgrounds/bc-bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="page-breadcrumb-content text-center">
+                        <h1>Publiez votre annonce en quelques étapes</h1>
+                        <ul class="page-breadcrumb-links">
+                            <li></li>
+                            <li><a href="/Register_Bricoleur">Connectez-vous</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of breadcrumb area  ====================-->
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <!--====================  login area ====================-->
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12 space__top__md--40 space__top__lm--40">
+                    <form class="user" action="{{ path('Post_Demande') }}" method="POST">
+                        <div class="login-form">
+                            <h4 class="login-title">Demande</h4>
+                            <div class="row">
+                                <div class="col-md-12 space__bottom--20">
+                                    <label>j'ai besoin de ..</label>
+                                    <input class="mb-0" type="text" name="TitreDemande"placeholder="Votre besoin">
+                                </div>
+                                <div class="col-md-12 space__bottom--20">
+                                    <label>Discription</label>
+                                    <input class="mb-0" type="text" name="DescriptionDemande" placeholder="Discription">
+                                </div>
+
+                                <div class="col-md-12 space__bottom--20">
+                                    <label>Adresse</label>
+                                    <input class="mb-0" type="text" name="Adresse" placeholder="Votre adresse">
+                                </div>
+
+                                <div class="col-md-12 space__bottom--20">
+                                    <label>Date</label>
+                                    <input class="mb-0" type="date" name="DateIntervention" placeholder="je suis disponible le..">
+                                </div>
+                                <div class="col-md-12 space__bottom--20">
+                                    <label>Télephone</label>
+                                    <input class="mb-0" type="text" name="phone" placeholder="+21623765794">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="default-btn mt-0">Publier</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of login area  ====================-->
+    <!--====================  brand logo area ====================-->
+    <div class="brand-logo-area space__bottom--r120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- brand logo slider -->
+                    <div class="brand-logo-wrapper">
+                        <div class="single-brand-logo">
+                            <a href="#"><img src="assets/img/brand-logo/logo1.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="single-brand-logo">
+                            <a href="#"><img src="assets/img/brand-logo/logo2.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="single-brand-logo">
+                            <a href="#"><img src="assets/img/brand-logo/logo3.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="single-brand-logo">
+                            <a href="#"><img src="assets/img/brand-logo/logo4.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="single-brand-logo">
+                            <a href="#"><img src="assets/img/brand-logo/logo5.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="single-brand-logo">
+                            <a href="#"><img src="assets/img/brand-logo/logo4.png" class="img-fluid" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of brand logo area  ====================-->
+    <!--====================  newsletter area ====================-->
+    <div class="newsletter-area newsletter-area-bg bg-img" data-bg="{{ asset('bundles/home/assets/img/backgrounds/newsletter-bg.jpg') }}">
+        <div class="newsletter-wrapper background-color--default-overlay space__inner--y60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-xl-10 mx-auto">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 mb-3 mb-lg-0">
+                                <!-- newsletter title -->
+                                <h3 class="newsletter-title"><span>Newsletter</span> Subscribe now</h3>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="newsletter-form">
+                                    <form id="mc-form" class="mc-form">
+                                        <input type="email" placeholder="To get update, enter your email">
+                                        <button class="theme-button" type="submit">Subscribe</button>
+                                    </form>
+                                    <!-- mailchimp-alerts Start -->
+                                    <div class="mailchimp-alerts">
+                                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                        <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                        <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                                    </div>
+                                    <!-- mailchimp-alerts end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of newsletter area  ====================-->
+    <!--====================  footer area ====================-->
+    <div class="footer-area bg-img space__inner--ry120" data-bg="{{ asset('bundles/home/assets/img/backgrounds/footer-bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-widget__logo space__bottom--40">
+                            <a href="index.html">
+                                <img src="assets/img/logo-white.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <p class="footer-widget__text space__bottom--20">Publishing packages and web page editors now use
+                            Lorem Ipsum as their default model text, and a search</p>
+                        <ul class="social-icons">
+                            <li><a href="http://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget space__top--15 space__top__md--40 space__top__lm--40">
+                        <h5 class="footer-widget__title space__bottom--20">Information</h5>
+                        <ul class="footer-widget__menu">
+                            <li><a href="#">About Brenda</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Our Projects</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget space__top--15 space__top__md--40 space__top__lm--40">
+                        <h5 class="footer-widget__title space__bottom--20">Support</h5>
+                        <ul class="footer-widget__menu">
+                            <li><a href="#">About Brenda</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Our Projects</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-widget__title space__top--15 space__bottom--20 space__top__md--40 space__top__lm--40">
+                        Contact us</h5>
+                    <div class="footer-contact-wrapper">
+                        <div class="single-footer-contact">
+                            <div class="single-footer-contact__icon"><i class="fa fa-map-marker"></i></div>
+                            <div class="single-footer-contact__text">245 Distrealy Road, Central Park, New York</div>
+                        </div>
+                        <div class="single-footer-contact">
+                            <div class="single-footer-contact__icon"><i class="fa fa-phone"></i></div>
+                            <div class="single-footer-contact__text"> <a href="tel:98548658125">+98548 658 125</a> <br> <a href="tel:65487235457">+65487 235 457</a> </div>
+                        </div>
+                        <div class="single-footer-contact">
+                            <div class="single-footer-contact__icon"><i class="fa fa-globe"></i></div>
+                            <div class="single-footer-contact__text"><a href="mailto:info@example.com">info@example.com</a>
+                                <br> <a href="#">www.example.com</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copyright text -->
+    <div class="copyright-area background-color--deep-dark space__inner--y30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="copyright-text">Copyright &copy; <a href="#">Codecarnival</a>, All Rights Reserved - 2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of footer area  ====================-->
+    <!--====================  scroll top ====================-->
+    <button class="scroll-top" id="scroll-top">
+        <i class="fa fa-angle-up"></i>
+    </button>
+{% endblock %}

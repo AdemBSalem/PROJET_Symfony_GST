@@ -1,0 +1,4 @@
+
+registration:
+  flash:
+    user_created: 'The user has been created successfully.'

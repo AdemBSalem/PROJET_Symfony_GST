@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!--====================  breadcrumb area ====================-->
+    <div class="page-breadcrumb bg-img space__bottom--r120" data-bg="{{ asset('bundles/home/assets/img/backgrounds/bc-bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="page-breadcrumb-content text-center">
+                        <h1>Créer un compte. Bricoleur</h1>
+                        <ul class="page-breadcrumb-links">
+                            <li>Vous avez déjà un compte ?</li>
+                            <li><a href="/Register_Bricoleur">Connectez-vous</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of breadcrumb area  ====================-->
+    <!--====================  login area ====================-->
+    <div class="login-area space__bottom--r120">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6">
+                <form action="#">
+                    <div class="login-form">
+
+    {% block fos_user_content %}
+    {% endblock %}
+
+                    </div>
+                </form>
+    </div>
+    </div>
+    </div>
+{% endblock %}
